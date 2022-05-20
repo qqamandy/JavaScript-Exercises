@@ -10,16 +10,26 @@
     <script>
         function fibonacciGenerator(n){
             let arr = [0,1]
-            for(let i = 2; i < n; i++){
+            let newarr = [];
+            if(n == 1 || n == 0){
+                newarr.push(arr[0])
+                console.log(newarr);
+            }else if(n == 2){
+                console.log(arr);
+            }else{
+                for(let i = 2; i < n; i++){
                 arr.push(arr[i-1]+arr[i-2])
             }
             console.log(arr);
+            }
+            
         }
 
-        // fibonacciGenerator(0);
-        // fibonacciGenerator(1);
-        // fibonacciGenerator(8);
-        // fibonacciGenerator(15);
+        fibonacciGenerator(0);
+        fibonacciGenerator(1);
+        fibonacciGenerator(2);
+        fibonacciGenerator(8);
+        fibonacciGenerator(15);
         fibonacciGenerator(20);
     </script>
 </body>
