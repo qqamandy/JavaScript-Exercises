@@ -8,6 +8,9 @@
 </head>
 <body>
     <script>
+
+        // exercise1
+
         let animals = [
             {id: 'a1', en: 'cat', cn: '貓', num: 30},
             {id: 'a2', en: 'dog', cn: '狗', num: 10},
@@ -16,18 +19,46 @@
             {id: 'a5', en: 'tiger', cn: '虎', num: 20},
         ];
 
-        // let animalsize = animals.forEach((animal)=>{
+
+        let newanimals=animals.map((animal)=>{
+            return {...animal, size:'small'};
+        })
+        // console.log(newanimals)
+
+
+
+        // animals.map((animal)=>{
         //     animal.size='small';
-        //     console.log(animal)
+        //     // console.log(animal)
         // })
 
-        animals.map((animal)=>{
-            animal.size='small';
-            // console.log(animal)
-        })
+        // console.log(animals);
 
-        console.log(animals);
+        //exercise2
+            let bear = newanimals.filter((value)=>{
+                return value.en == 'bear';
+            })
+            // console.log(bear)
 
+            bear[0].size='large';
+            // console.log(newanimals)
+
+            newanimals.splice(2,0,{id: 'a35', en: 'pig', cn: '豬', num: 3, size: 'medium'});
+
+            console.log(newanimals.find((value)=>{
+                return value.num < 10
+            }).cn)
+            
+
+            
+            
+            
+
+            
+            
+
+
+            
         
 
 
