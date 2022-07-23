@@ -4,7 +4,18 @@
 // findNthMin([1, 5, 15, 7, 9], 3); // returns 7
 
 function findNthMin(arr,n){
-    let result = []
+    for(let i = 0; i < arr.length; i++){
+        let count = 0
+        for(let j = 0; j <arr.length; j++){
+            if(arr[j]<arr[i]){
+                count++
+            }
+        }
+        if(count == n-1){
+            return arr[i]
+        }
+    }
+
     
 }
 
