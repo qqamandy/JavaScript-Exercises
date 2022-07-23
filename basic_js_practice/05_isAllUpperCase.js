@@ -8,14 +8,14 @@ function isAllUpperCase(str){
     if(str.length==0){
         return false
     }
-
+    //先設定為false就部會有中斷的問題
+    let allUpperCase = true;
     for(let i = 0; i < str.length; i++){
         if(str[i] != str[i].toUpperCase()){
-            return false
-        }else{
-            return true
+            allUpperCase=false
         }
     }
+    return allUpperCase
 }
 
 console.log(isAllUpperCase('ABCD'))
